@@ -1,15 +1,14 @@
+// src/main.jsx
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App.jsx';
-import { AuthProvider } from './context/AuthContext'; // ✅ Add this
+import { AuthProvider } from './context/AuthContext';
 import './index.css';
-
-const basename = '/gyaat_testing';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename={basename}>
+    <BrowserRouter basename="/gyaat_testing"> {/* ✅ Exact repo name */}
       <AuthProvider>
         <App />
       </AuthProvider>
